@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clsBankClient.cpp" />
+    <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="cpp-oop-bank-system.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clsBankClient.h" />
+    <ClInclude Include="clsDate.h" />
+    <ClInclude Include="clsInputValidate.h" />
+    <ClInclude Include="clsPerson.h" />
+    <ClInclude Include="clsString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
