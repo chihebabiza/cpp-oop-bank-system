@@ -132,7 +132,9 @@
     <ClCompile Include="cpp-oop-bank-system.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsAddNewClientScreen.h" />
     <ClInclude Include="clsBankClient.h" />
+    <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsMainScreen.h" />
