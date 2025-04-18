@@ -39,7 +39,7 @@
     <ClCompile Include="clsTotalBalancesScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="clsManageUsers.cpp">
+    <ClCompile Include="clsManageUsersScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -93,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsTotalBalancesScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsManageUsersScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
