@@ -130,6 +130,7 @@
     <ClCompile Include="clsBankClient.cpp" />
     <ClCompile Include="clsDepositScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
+    <ClCompile Include="clsManageUsers.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
     <ClCompile Include="clsTransactionsScreen.cpp" />

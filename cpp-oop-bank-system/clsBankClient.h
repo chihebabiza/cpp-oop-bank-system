@@ -360,17 +360,17 @@ public:
 
     bool Withdraw(double Amount)
     {
-        if (Amount > _AccountBalance)
+        if (Amount > _AccountBalance || Amount <= 0)
         {
+            // Withdrawal fails if the amount exceeds the balance or is invalid
             return false;
         }
-        else
-        {
-            _AccountBalance -= Amount;
-            Save();
-            return true;
-        }
+
+        _AccountBalance -= Amount;
+        Save();
+        return true;
     }
+
 
     static double GetTotalBalances()
     {
