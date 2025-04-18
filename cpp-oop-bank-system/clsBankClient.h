@@ -358,7 +358,6 @@ public:
         Save();
     }
 
-
     bool Withdraw(double Amount)
     {
         if (Amount > _AccountBalance)
@@ -371,7 +370,6 @@ public:
             Save();
             return true;
         }
-
     }
 
     static double GetTotalBalances()
