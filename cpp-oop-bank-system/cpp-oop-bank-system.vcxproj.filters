@@ -48,6 +48,9 @@
     <ClCompile Include="clsUsersListScrren.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clsAddNewUserScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsPerson.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsListUsersScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddNewUserScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
