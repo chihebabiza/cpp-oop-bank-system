@@ -2,61 +2,67 @@
 
 #include <iostream>
 #include "clsScreen.h"
-#include "clsUser.h"
+#include "clsBankClient.h"
 #include <iomanip>
 
-class clsListUsersScreen :protected clsScreen
+class clsClientListScreen :protected clsScreen
 {
 
 private:
-    static void _PrintUserRecordLine(clsUser User)
+    static void PrintClientRecordLine(clsBankClient Client)
     {
 
-        cout << setw(8) << left << "" << "| " << setw(12) << left << User.UserName;
-        cout << "| " << setw(25) << left << User.FullName();
-        cout << "| " << setw(12) << left << User.Phone;
-        cout << "| " << setw(20) << left << User.Email;
-        cout << "| " << setw(10) << left << User.Password;
-        cout << "| " << setw(12) << left << User.Permissions;
+        cout << setw(8) << left << "" << "| " << setw(15) << left << Client.AccountNumber();
+        cout << "| " << setw(20) << left << Client.FullName();
+        cout << "| " << setw(12) << left << Client.Phone;
+        cout << "| " << setw(20) << left << Client.Email;
+        cout << "| " << setw(10) << left << Client.PinCode;
+        cout << "| " << setw(12) << left << Client.AccountBalance;
 
     }
 
 public:
 
-    static void ShowUsersList()
+    static void ShowClientsList()
     {
-        vector <clsUser> vUsers = clsUser::GetUsersList();
 
-        string Title = "\t  User List Screen";
-        string SubTitle = "\t    (" + to_string(vUsers.size()) + ") User(s).";
+        if (!CheckAccessRights(clsUser::enPermissions::pListClients))
+        {
+            return;// this will exit the function and it will not continue
+        }
+
+        vector <clsBankClient> vClients = clsBankClient::GetClientsList();
+        string Title = "\t  Client List Screen";
+        string SubTitle = "\t    (" + to_string(vClients.size()) + ") Client(s).";
 
         _DrawScreenHeader(Title, SubTitle);
 
         cout << setw(8) << left << "" << "\n\t_______________________________________________________";
-        cout << "______________________________________________\n" << endl;
+        cout << "_________________________________________\n" << endl;
 
-        cout << setw(8) << left << "" << "| " << left << setw(12) << "UserName";
-        cout << "| " << left << setw(25) << "Full Name";
+        cout << setw(8) << left << "" << "| " << left << setw(15) << "Accout Number";
+        cout << "| " << left << setw(20) << "Client Name";
         cout << "| " << left << setw(12) << "Phone";
         cout << "| " << left << setw(20) << "Email";
-        cout << "| " << left << setw(10) << "Password";
-        cout << "| " << left << setw(12) << "Permissions";
+        cout << "| " << left << setw(10) << "Pin Code";
+        cout << "| " << left << setw(12) << "Balance";
         cout << setw(8) << left << "" << "\n\t_______________________________________________________";
-        cout << "______________________________________________\n" << endl;
+        cout << "_________________________________________\n" << endl;
 
-        if (vUsers.size() == 0)
-            cout << "\t\t\t\tNo Users Available In the System!";
+        if (vClients.size() == 0)
+            cout << "\t\t\t\tNo Clients Available In the System!";
         else
 
-            for (clsUser User : vUsers)
+            for (clsBankClient Client : vClients)
             {
 
-                _PrintUserRecordLine(User);
+                PrintClientRecordLine(Client);
                 cout << endl;
             }
 
         cout << setw(8) << left << "" << "\n\t_______________________________________________________";
-        cout << "______________________________________________\n" << endl;
+        cout << "_________________________________________\n" << endl;
+
     }
 
 };

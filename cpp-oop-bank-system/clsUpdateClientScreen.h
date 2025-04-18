@@ -51,6 +51,10 @@ public:
 
     static void ShowUpdateClientScreen()
     {
+        if (!CheckAccessRights(clsUser::enPermissions::pUpdateClients))
+        {
+            return;// this will exit the function and it will not continue
+        }
 
         _DrawScreenHeader("\tUpdate Client Screen");
 
