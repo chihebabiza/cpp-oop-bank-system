@@ -13,9 +13,9 @@ private:
     {
 
         cout << setw(8) << left << "" << "| " << setw(15) << left << Client.AccountNumber();
-        cout << "| " << setw(25) << left << Client.FullName();
+        cout << "| " << setw(20) << left << Client.FullName();
         cout << "| " << setw(12) << left << Client.Phone;
-        cout << "| " << setw(25) << left << Client.Email;
+        cout << "| " << setw(20) << left << Client.Email;
         cout << "| " << setw(10) << left << Client.PinCode;
         cout << "| " << setw(12) << left << Client.AccountBalance;
 
@@ -23,10 +23,13 @@ private:
 
 public:
 
-
     static void ShowClientsList()
     {
 
+        if (!CheckAccessRights(clsUser::enPermissions::pListClients))
+        {
+            return;// this will exit the function and it will not continue
+        }
 
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();
         string Title = "\t  Client List Screen";
@@ -34,14 +37,13 @@ public:
 
         _DrawScreenHeader(Title, SubTitle);
 
-
         cout << setw(8) << left << "" << "\n\t_______________________________________________________";
         cout << "_________________________________________\n" << endl;
 
         cout << setw(8) << left << "" << "| " << left << setw(15) << "Accout Number";
-        cout << "| " << left << setw(25) << "Client Name";
+        cout << "| " << left << setw(20) << "Client Name";
         cout << "| " << left << setw(12) << "Phone";
-        cout << "| " << left << setw(25) << "Email";
+        cout << "| " << left << setw(20) << "Email";
         cout << "| " << left << setw(10) << "Pin Code";
         cout << "| " << left << setw(12) << "Balance";
         cout << setw(8) << left << "" << "\n\t_______________________________________________________";
