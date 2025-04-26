@@ -21,6 +21,23 @@ private:
 
 public:
 
+	static string GetSystemDateTimeString()
+	{
+		time_t t = time(0);
+		tm* now = localtime(&t);
+
+		string Day = (now->tm_mday < 10 ? "0" : "") + std::to_string(now->tm_mday);
+		string Month = (now->tm_mon + 1 < 10 ? "0" : "") + std::to_string(now->tm_mon + 1);
+		string Year = std::to_string(now->tm_year + 1900);
+		string Hour = (now->tm_hour < 10 ? "0" : "") + std::to_string(now->tm_hour);
+		string Minute = (now->tm_min < 10 ? "0" : "") + std::to_string(now->tm_min);
+		string Second = (now->tm_sec < 10 ? "0" : "") + std::to_string(now->tm_sec);
+
+		return Day + "/" + Month + "/" + Year + " - " + Hour + ":" + Minute + ":" + Second;
+	}
+
+
+
 	clsDate()
 	{
 		time_t t = time(0);
@@ -99,7 +116,7 @@ public:
 		time_t t = time(0);
 		tm* now = localtime(&t);
 
-		short Day, Month, Year;
+		short Day, Month, Year, Hour, Minute, Second;
 
 		Year = now->tm_year + 1900;
 		Month = now->tm_mon + 1;
