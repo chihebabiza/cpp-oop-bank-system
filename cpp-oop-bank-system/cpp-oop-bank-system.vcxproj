@@ -134,6 +134,7 @@
     <ClCompile Include="clsFindClientScreen.cpp" />
     <ClCompile Include="clsFindUserScreen.cpp" />
     <ClCompile Include="clsListClientScreen.cpp" />
+    <ClCompile Include="clsLoginRegister.cpp" />
     <ClCompile Include="clsLoginScreen.cpp" />
     <ClCompile Include="clsManageUsersScreen.cpp" />
     <ClCompile Include="clsPerson.cpp" />
@@ -158,11 +159,11 @@
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsListClientScreen.h" />
+    <ClInclude Include="clsLoginRegisterScreen.h" />
     <ClInclude Include="clsLoginScreen.h" />
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsManageUsersScreen.h" />
     <ClInclude Include="clsPerson.h" />
-    <ClInclude Include="clsRegisterLogins.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsTotalBalancesScreen.h" />

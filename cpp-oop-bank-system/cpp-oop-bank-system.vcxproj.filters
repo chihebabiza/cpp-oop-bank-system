@@ -69,6 +69,9 @@
     <ClCompile Include="clsRegisterLogins.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clsLoginRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsPerson.h">
@@ -149,7 +152,7 @@
     <ClInclude Include="clsListClientScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsRegisterLogins.h">
+    <ClInclude Include="clsLoginRegisterScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

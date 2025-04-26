@@ -11,6 +11,7 @@
 #include "clsManageUsersScreen.h"
 #include "clsLoginScreen.h"
 #include "Global.h"
+#include "clsLoginRegisterScreen.h"
 
 using namespace std;
 
@@ -22,13 +23,13 @@ private:
     enum enMainMenueOptions {
         eListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
         eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6,
-        eManageUsers = 7, eExit = 8
+        eManageUsers = 7, eLoginRegister = 8, eExit = 9
     };
 
     static short _ReadMainMenueOption()
     {
-        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 8]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 8, "Enter Number between 1 to 8? ");
+        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 9]? ";
+        short Choice = clsInputValidate::ReadShortNumberBetween(1, 9, "Enter Number between 1 to 8? ");
         return Choice;
     }
 
@@ -91,19 +92,20 @@ private:
         clsManageUsersScreen::ShowManageUsersMenue();
     }
 
-    /*  static void _ShowEndScreen()
-      {
-          cout << "\nEnd Screen Will be here...\n";
+    static void _ShowLoginRegisterScreen()
+    {
+        // cout << "\nLogin Register Will be here...\n";
+        clsLoginRegisterScreen::ShowLoginRegisterScreen();
 
-      }*/
+    }
 
     static void _Logout()
     {
 
         CurrentUser = clsUser::Find("", "");
+
         //then it will go back to main function.
     }
-
 
     static void _PerfromMainMenueOption(enMainMenueOptions MainMenueOption)
     {
@@ -152,6 +154,12 @@ private:
             _GoBackToMainMenue();
             break;
 
+        case enMainMenueOptions::eLoginRegister:
+            system("cls");
+            _ShowLoginRegisterScreen();
+            _GoBackToMainMenue();
+            break;
+
         case enMainMenueOptions::eExit:
             system("cls");
             _Logout();
@@ -181,7 +189,8 @@ public:
         cout << setw(37) << left << "" << "\t[5] Find Client.\n";
         cout << setw(37) << left << "" << "\t[6] Transactions.\n";
         cout << setw(37) << left << "" << "\t[7] Manage Users.\n";
-        cout << setw(37) << left << "" << "\t[8] Logout.\n";
+        cout << setw(37) << left << "" << "\t[8] Login Register.\n";
+        cout << setw(37) << left << "" << "\t[9] Logout.\n";
         cout << setw(37) << left << "" << "===========================================\n";
 
         _PerfromMainMenueOption((enMainMenueOptions)_ReadMainMenueOption());
