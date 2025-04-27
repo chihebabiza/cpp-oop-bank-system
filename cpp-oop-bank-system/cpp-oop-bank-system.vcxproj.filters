@@ -75,6 +75,9 @@
     <ClCompile Include="clsTransferScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clsTransfersLogScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsPerson.h">
@@ -158,7 +161,10 @@
     <ClInclude Include="clsLoginRegisterScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsTransferScreen.h">
+    <ClInclude Include="clsTransferLogScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTransfersLogScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
