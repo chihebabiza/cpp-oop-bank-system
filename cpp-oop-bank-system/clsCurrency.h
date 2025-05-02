@@ -5,17 +5,12 @@
 #include "clsString.h"
 #include <vector>
 #include <fstream>
-#include <iomanip>
-#include "clsScreen.h"
-#include "clsInputValidate.h"
-
-class clsCurrency : protected clsScreen
+class clsCurrency
 {
 
 private:
 
     enum enMode { EmptyMode = 0, UpdateMode = 1 };
-    enum enCurrenciesMenueOption {eListCurrencies=1,eFindCurrency=2,eUpdateRate=3,eCurrencyCalculator=4,eMainMenue=5};
     enMode _Mode;
 
     string _Country;
@@ -123,96 +118,6 @@ private:
     static clsCurrency _GetEmptyCurrencyObject()
     {
         return clsCurrency(enMode::EmptyMode, "", "", "", 0);
-    }
-
-    static short ReadCurrencyMenueOption()
-    {
-        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 5]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 6, "Enter Number between 1 to 5? ");
-        return Choice;
-    }
-
-    static void _ShowListCurrenciesScreen()
-    {
-        cout << "\n Deposit Screen will be here.\n";
-        //clsDepositScreen::ShowDepositScreen();
-    }
-
-    static void _ShowFindCurrencyScreen()
-    {
-        cout << "\n Withdraw Screen will be here.\n";
-        //clsWithdrawScreen::ShowWithdrawScreen();
-    }
-
-    static void _ShowUpdateRateScreen()
-    {
-         cout << "\n Balances Screen will be here.\n";
-        //clsTotalBalancesScreen::ShowTotalBalances();
-
-    }
-
-    static void _ShowCurrencyCalculatorScreen()
-    {
-        cout << "\n Transfer Screen will be here.\n";
-        //clsTransferScreen::ShowTransferScreen();
-
-
-    }
-
-    static void _GoBackToCurrenciesMenue()
-    {
-        cout << "\n\nPress any key to go back to Currencies Menue...";
-        system("pause>0");
-        ShowCurrencyMenu();
-
-    }
-
-    static void _PerformTransactionsMenueOption(enCurrenciesMenueOption CurrencyMenueOption)
-    {
-        switch (CurrencyMenueOption)
-        {
-        case enCurrenciesMenueOption::eListCurrencies:
-        {
-            system("cls");
-            _ShowListCurrenciesScreen();
-            _GoBackToCurrenciesMenue();
-            break;
-        }
-
-        case enCurrenciesMenueOption::eFindCurrency:
-        {
-            system("cls");
-            _ShowFindCurrencyScreen();
-            _GoBackToCurrenciesMenue();
-            break;
-        }
-
-        case enCurrenciesMenueOption::eUpdateRate:
-        {
-            system("cls");
-            _ShowUpdateRateScreen();
-            _GoBackToCurrenciesMenue();
-            break;
-        }
-
-        case enCurrenciesMenueOption::eCurrencyCalculator:
-        {
-            system("cls");
-            _ShowCurrencyCalculatorScreen();
-            _GoBackToCurrenciesMenue();
-            break;
-        }
-
-
-        case enCurrenciesMenueOption::eMainMenue:
-        {
-
-            //do nothing here the main screen will handle it :-) ;
-
-        }
-        }
-
-
     }
 
 public:
@@ -333,24 +238,6 @@ public:
     static vector <clsCurrency> GetCurrenciesList()
     {
         return _LoadCurrencysDataFromFile();
-    }
-
-    static void ShowCurrencyMenu()
-    {
-        system("cls");
-        _DrawScreenHeader("\tTransactions Screen");
-
-        cout << setw(37) << left << "" << "===========================================\n";
-        cout << setw(37) << left << "" << "\t\t  Currency Exchanger Menue\n";
-        cout << setw(37) << left << "" << "===========================================\n";
-        cout << setw(37) << left << "" << "\t[1] List Currencies.\n";
-        cout << setw(37) << left << "" << "\t[2] Find Currency.\n";
-        cout << setw(37) << left << "" << "\t[3] Update Rate.\n";
-        cout << setw(37) << left << "" << "\t[4] Currency Calculator.\n";
-        cout << setw(37) << left << "" << "\t[5] Main Menue.\n";
-        cout << setw(37) << left << "" << "===========================================\n";
-
-        _PerformTransactionsMenueOption((enCurrenciesMenueOption)ReadCurrencyMenueOption());
     }
 };
 
