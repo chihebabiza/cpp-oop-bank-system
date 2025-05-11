@@ -1,7 +1,7 @@
 United States of America#//#USD#//#US Dollar#//#1.000000
 Afghanistan#//#AFN#//#Afghanistan Afghani#//#87.480003
 Albania#//#ALL#//#Albania Lek(e)#//#109.010002
-Algeria#//#DZD#//#Algerian Dinar#//#137.046005
+Algeria#//#DZD#//#Algerian Dinar#//#137.102997
 American Samoa#//#USD#//#US Dollar#//#1.000000
 France#//#EUR#//#Euro#//#0.900000
 Angola#//#AOA#//#Angolan Kwanza#//#504.734009

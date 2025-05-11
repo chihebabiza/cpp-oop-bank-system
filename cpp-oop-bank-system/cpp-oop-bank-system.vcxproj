@@ -146,6 +146,7 @@
     <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsTransferScreen.cpp" />
     <ClCompile Include="clsTransfersLogScreen.cpp" />
+    <ClCompile Include="clsUpdateCurrencyRate.cpp" />
     <ClCompile Include="clsUpdateUserScreen.cpp" />
     <ClCompile Include="clsUsers.cpp" />
     <ClCompile Include="clsUsersListScrren.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="clsTransferLogScreen.h" />
     <ClInclude Include="clsTransferScreen.h" />
     <ClInclude Include="clsUpdateClientScreen.h" />
+    <ClInclude Include="clsUpdateCurrencyRateScreen.h" />
     <ClInclude Include="clsUpdateUserScreen.h" />
     <ClInclude Include="clsUser.h" />
     <ClInclude Include="clsListUsersScreen.h" />
