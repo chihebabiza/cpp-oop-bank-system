@@ -87,6 +87,9 @@
     <ClCompile Include="clsCurrencyExchangeMainScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clsFindCurrencyScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsPerson.h">
@@ -186,6 +189,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsCurrencyExchangeMainScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindCurrencyScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

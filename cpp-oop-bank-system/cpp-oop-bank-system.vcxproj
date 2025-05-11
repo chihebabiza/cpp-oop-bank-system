@@ -135,6 +135,7 @@
     <ClCompile Include="clsDeleteUserScreen.cpp" />
     <ClCompile Include="clsDepositScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
+    <ClCompile Include="clsFindCurrencyScreen.cpp" />
     <ClCompile Include="clsFindUserScreen.cpp" />
     <ClCompile Include="clsListClientScreen.cpp" />
     <ClCompile Include="clsLoginRegister.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="clsDeleteUserScreen.h" />
     <ClInclude Include="clsDepositScreen.h" />
     <ClInclude Include="clsFindClientScreen.h" />
+    <ClInclude Include="clsFindCurrencyScreen.h" />
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsClientListScreen.h" />
