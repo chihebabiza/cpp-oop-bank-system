@@ -12,4 +12,3 @@ public:
 	virtual void SendSMS(string Title, string Body) = 0;
 
 };
-
